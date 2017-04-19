@@ -16,8 +16,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            styles: ["\n  \t.active {\n  \t\tcolor: #FFF !important;\n  \t}\n  "],
-            templateUrl: './app/app.component.html'
+            styles: ["\n    \n  "],
+            template: "\n    <header>\n      <nav class=\"navbar navbar-inverse\">\n        <div class=\"container-fluid\"> \n          <div class=\"navbar-header\">\n            <a href=\"#\" class=\"navbar-brand\">My Routing App</a>\n\n            <ul class=\"nav navbar-nav\">\n              <li><a href=\"#\">Home</a></li>\n              <li><a href=\"#\">About</a></li>\n              <li><a href=\"#\">Contact</a></li>\n            </ul>\n          </div>\n        </div>\n      </nav>\n    </header>\n\n    <div class=\"jumbotron text-center\">\n      <h1>The App Lives!</h1>\n      <p>{{ message }}</p>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

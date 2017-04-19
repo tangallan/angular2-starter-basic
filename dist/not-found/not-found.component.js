@@ -9,19 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.message = 'This is the sample message.';
+var NotFoundComponent = (function () {
+    function NotFoundComponent() {
     }
-    AppComponent = __decorate([
+    NotFoundComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            styles: ["\n  \t.active {\n  \t\tcolor: #FFF !important;\n  \t}\n  "],
-            templateUrl: './app/app.component.html'
+            template: "\n\t\t<div class=\"jumbotron text-center\">\n\t\t\t<h1>404 Not Found</h1>\n\n\t\t\t<p>\n\t\t\t\tYou may be list. Follow the breadcrumbs back <a routerLink=\"/\">Home</a>\n\t\t\t</p>\n\t\t</div>\n\t"
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], NotFoundComponent);
+    return NotFoundComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.NotFoundComponent = NotFoundComponent;
+//# sourceMappingURL=not-found.component.js.map
