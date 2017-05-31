@@ -1,34 +1,6 @@
-import { Component } from '@angular/core';
-
-export class User {
-	id: number;
-	name: string;
-	username: string;
-	avatar: string;
-}
-
-const users : User[] = [
-	{
-		id: 1,
-		name: 'Chris',
-		username: 'sevilayha',
-		avatar: 'https://pbs.twimg.com/profile_images/850147482117865472/O28qQSrN_400x400.jpg'
-	},
-
-	{
-		id: 2,
-		name: 'Nick',
-		username: 'whatnicktweets',
-		avatar: 'https://pbs.twimg.com/profile_images/502500686588690432/wXBzuCBj_400x400.jpeg'
-	},
-
-	{
-		id: 3,
-		name: 'Holly',
-		username: 'hollylawly',
-		avatar: 'https://pbs.twimg.com/profile_images/721918869821005824/2qT_RY5M_400x400.jpg'
-	}
-];
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { User } from '../shared/models/user';
 
 @Component({
 	selector: 'about-page',
@@ -48,13 +20,13 @@ const users : User[] = [
 	template :`
 		<div class="row" *ngIf="users">
 			<div class="col-sm-4" *ngFor="let user of users">
-				<div class="profile-card">
+				<div class="profile-card" [routerLink]="['/about', user.username]">
 					<img [src]="user.avatar" class="img-responsive img-circle" />
 
 					<h2>{{ user.name }}</h2>
 
 					<p>
-						<a href="#">
+						<a href="https://twitter.com/{{ user.username }}">
 							{{ user.username }}
 						</a>
 					</p>
@@ -64,6 +36,16 @@ const users : User[] = [
 	`
 })
 
-export class AboutComponent {
-	users : Users[] = users;
+export class AboutComponent implements OnInit {
+	users : User[];
+
+	constructor(private route: ActivatedRoute) {
+
+	}
+
+	ngOnInit() {
+		this.route.data.forEach((data : { users: User[] }) => {
+			this.users = data.users;
+		});
+	}
 }

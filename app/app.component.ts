@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   	.active {
   		color: #FFF !important;
   	}
-  `]
+  `],
   templateUrl: './app/app.component.html'
 })
 
