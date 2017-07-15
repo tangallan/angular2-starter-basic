@@ -7,7 +7,10 @@ import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes : Routes = [
- { path : '', component: HomeComponent },
+ { 
+ 	path : '', 
+ 	component: HomeComponent 
+ },
  {
  	path: 'about',
  	loadChildren: 'app/about/about.module#AboutModule'

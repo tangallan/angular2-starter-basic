@@ -4,7 +4,10 @@ var home_component_1 = require('./home/home.component');
 var contact_component_1 = require('./contact/contact.component');
 var not_found_component_1 = require('./not-found/not-found.component');
 var appRoutes = [
-    { path: '', component: home_component_1.HomeComponent },
+    {
+        path: '',
+        component: home_component_1.HomeComponent
+    },
     {
         path: 'about',
         loadChildren: 'app/about/about.module#AboutModule'
